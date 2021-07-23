@@ -1,0 +1,62 @@
+﻿
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<style>
+    .card-text, .card-title{
+        color:white
+    }
+   
+</style>
+<br />
+<h1>İSTATİSTİKLER</h1>
+<div class="row">
+    <div  style="width: 40%; background-color: red;margin:10px">
+        <div class="card-body">
+            <h5 class="card-title" style="font-size: 25px">Toplam Kategori Sayısı</h5>
+            <p class="card-text" style="text-align:center; font-size: 30px">@ViewBag.ToplamKategori</p>
+        </div>
+    </div>
+
+    <div class="card" style="width: 40%; background-color: red;margin:10px">
+        <div class="card-body">
+            <h5 class="card-title" style="font-size: 25px">Yazılım başlık sayısı</h5>
+            <p class="card-text" style="text-align:center; font-size: 30px">@ViewBag.YazilimBasliklari</p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div  style="width: 40%; background-color: green;margin:10px">
+        <div class="card-body">
+            <h5 class="card-title" style="font-size: 25px">İçinde a harfi olan yazarlar</h5>
+            <p class="card-text" style="text-align:center; font-size: 30px">@ViewBag.IcindeAHarfiOlanYazarlar</p>
+        </div>
+    </div>
+
+    <div class="card" style="width: 40%; background-color: blue;margin:10px">
+        <div class="card-body">
+            <h5 class="card-title" style="font-size: 25px">En fazla başlığı olan kategori adı</h5>
+            <p class="card-text" style="text-align:center; font-size: 30px">@ViewBag.EnFazlaBaslikKategori</p>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div  style="width: 40%; background-color: orange;margin:10px">
+        <div class="card-body">
+            <h5 class="card-title" style="font-size: 25px">Kategori status farkı</h5>
+            <p class="card-text" style="text-align:center; font-size: 30px">@ViewBag.Status</p>
+        </div>
+    </div>
+
+    <div class="card" style="width: 40%; background-color: aqua;margin:10px">
+        <div class="card-body">
+            <h5 class="card-title" style="font-size: 25px">Toplam Kategori Sayısı</h5>
+            <p class="card-text" style="text-align:center; font-size: 30px">@ViewBag.ToplamKategori</p>
+        </div>
+    </div>
+</div>
+
+
