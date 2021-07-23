@@ -40,9 +40,6 @@ namespace MvcProjeKampi.Controllers
 
             return View();
 
-
-
-            return View();
         }
     }
 }
