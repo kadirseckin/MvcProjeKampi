@@ -71,11 +71,8 @@ namespace MvcProjeKampi.Controllers
             ValidationResult result = categoryValidator.Validate(p);
 
             if (result.IsValid)
-            {
-                //TODO: update işlemleri yapılacak.
-                //var categoryValue = cm.GetByID(p.CategoryID);
-                //cm.CategoryUpdate(categoryValue);
-
+            {              
+                cm.CategoryUpdate(p);
                 return RedirectToAction("Index");
             }
             else

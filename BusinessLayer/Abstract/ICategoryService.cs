@@ -11,10 +11,10 @@ namespace BusinessLayer.Abstract
     public interface ICategoryService
     {
         List<Category> GetList();
-        void CategoryAddBL(Category p);
+        void CategoryAddBL(Category category);
         Category GetByID(int id);
         void CategoryDelete(Category category);
         void CategoryUpdate(Category category);
-        List<Category> GetList(Expression<Func<Category, bool>> filter);
+       
     }
 }

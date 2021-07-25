@@ -20,9 +20,9 @@ namespace BusinessLayer.Concrete
             _categoryDal = categoryDal;
         }
 
-        public void CategoryAddBL(Category p)
+        public void CategoryAddBL(Category category)
         {
-            _categoryDal.Insert(p);
+            _categoryDal.Insert(category);
         }
 
         public void CategoryDelete(Category category)
@@ -43,11 +43,6 @@ namespace BusinessLayer.Concrete
         public List<Category> GetList()
         {
             return _categoryDal.List();            
-        }
-
-        public List<Category>GetList(Expression<Func<Category, bool>> filter)
-        {
-            return _categoryDal.List(filter);
         }
 
        

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -12,10 +13,10 @@ namespace EntityLayer.Concrete
         [Key]
         public int CategoryID { get; set; }
 
-        [StringLength(50)]
+        [StringLength(50), DisplayName("Kategori adı")]
         public string CategoryName { get; set; }
 
-        [StringLength(200)]
+        [StringLength(200), DisplayName("Kategori açıklama")]
         public string CategoryDescription { get; set; }
         public bool CategoryStatus { get; set; }
 
