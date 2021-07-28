@@ -56,6 +56,7 @@
     <Compile Include="Abstract\IContactDal.cs" />
     <Compile Include="Abstract\IContentDal.cs" />
     <Compile Include="Abstract\IHeadingDal.cs" />
+    <Compile Include="Abstract\IMessageDal.cs" />
     <Compile Include="Abstract\IRepository.cs" />
     <Compile Include="Abstract\IWriterDal.cs" />
     <Compile Include="Concrete\Context.cs" />
@@ -65,6 +66,7 @@
     <Compile Include="EntityFramework\EfContactDal.cs" />
     <Compile Include="EntityFramework\EfContentDal.cs" />
     <Compile Include="EntityFramework\EfHeadingDal.cs" />
+    <Compile Include="EntityFramework\EfMessageDal.cs" />
     <Compile Include="EntityFramework\EfWriterDal.cs" />
     <Compile Include="Migrations\202107211016232_mig1.cs" />
     <Compile Include="Migrations\202107211016232_mig1.designer.cs">
@@ -93,6 +95,14 @@
     <Compile Include="Migrations\202107251511090_migration_headingStatus_add.cs" />
     <Compile Include="Migrations\202107251511090_migration_headingStatus_add.designer.cs">
       <DependentUpon>202107251511090_migration_headingStatus_add.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107261701335_update_about.cs" />
+    <Compile Include="Migrations\202107261701335_update_about.designer.cs">
+      <DependentUpon>202107261701335_update_about.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202107281723259_mig_addmessage.cs" />
+    <Compile Include="Migrations\202107281723259_mig_addmessage.designer.cs">
+      <DependentUpon>202107281723259_mig_addmessage.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -128,6 +138,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202107251511090_migration_headingStatus_add.resx">
       <DependentUpon>202107251511090_migration_headingStatus_add.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107261701335_update_about.resx">
+      <DependentUpon>202107261701335_update_about.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202107281723259_mig_addmessage.resx">
+      <DependentUpon>202107281723259_mig_addmessage.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup />

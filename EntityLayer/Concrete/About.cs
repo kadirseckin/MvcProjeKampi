@@ -12,17 +12,12 @@ namespace EntityLayer.Concrete
         [Key]
         public int AboutID { get; set; }
 
-        [StringLength(1000)]
-        public string AboutDetailsFirst { get; set; }
-
-        [StringLength(1000)]
-        public string AboutDetailsSecond { get; set; }
-
         [StringLength(100)]
-        public string AboutImageFirst { get; set; }
+        public string AboutTitle{ get; set; }
 
-        [StringLength(100)]
-        public string AboutImageSecond { get; set; }
+        [StringLength(1000)]
+        public string AboutText { get; set; }
+   
 
     }
 }

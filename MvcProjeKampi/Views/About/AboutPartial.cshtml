@@ -1,0 +1,33 @@
+﻿
+
+<button class="btn btn-primary" data-toggle="modal" data-target="#Modal1">
+    Yeni Hakkımızda Yazı Girişi
+</button>
+
+<div class="modal" id="Modal1">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <h2 class="modal-title">
+                    Yeni metin girişi
+                </h2>
+            </div>
+
+            <form method="post" action="/About/AddAbout">
+                <div class="modal-body">
+                    <label>Başlık</label>
+                    <input type="text" name="AboutTitle" class="form-control" />
+                    <br />
+
+                    <label>İçerik</label>
+                    <textarea type="text" name="AboutText" class="form-control" rows="5" style="resize:none"></textarea>
+                    <br />
+
+                    <button class="btn btn-info">Kaydet</button>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
