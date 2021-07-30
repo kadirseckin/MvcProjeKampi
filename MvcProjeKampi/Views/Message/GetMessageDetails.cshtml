@@ -1,4 +1,4 @@
-﻿@model EntityLayer.Concrete.Contact
+﻿@model EntityLayer.Concrete.Message
 
 @{
     ViewBag.Title = "GetContactDetails";
@@ -16,8 +16,7 @@
                 <div class="col-sm-6">
                     <h1>Mesaj detay sayfası</h1>
                 </div>
-                
-                </div>
+              
             </div>
         </div><!-- /.container-fluid -->
     </section>
@@ -41,8 +40,13 @@
                             <div class="mailbox-read-info">
                                 <h5>Konu : @Html.DisplayFor(x => x.Subject)</h5>
                                 <h6>
-                                    Mail :  @Html.DisplayFor(x => x.UserMail)
-                                    <span class="mailbox-read-time float-right">15 Feb. 2015 11:03 PM</span>
+                                    Kime :  @Html.DisplayFor(x => x.ReceiverMail)
+                                    <br />
+                                    Kimden: @Html.DisplayFor(x=>x.SenderMail)
+                                    
+                                    <br />
+                                    <span class="mailbox-read-time float-right">
+                                    @Html.DisplayFor(x=>x.MessageDate)</span>
                                 </h6>
                             </div>
                             <!-- /.mailbox-read-info -->
@@ -65,7 +69,7 @@
                             </div>
                             <!-- /.mailbox-controls -->
                             <div class="mailbox-read-message">
-                                <p>@Html.DisplayFor(x => x.Message)</p>
+                                <p>@Html.DisplayFor(x => x.MessageContent)</p>
 
                             </div>
                             <!-- /.mailbox-read-message -->
@@ -77,7 +81,7 @@
                 <!-- /.col -->
             </div>
             <!-- /.row -->
-            </div>>
+        </div>>
     </section>
 </body>
 </html>

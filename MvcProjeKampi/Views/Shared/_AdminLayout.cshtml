@@ -19,7 +19,12 @@
     <!-- Theme style -->
     <link rel="stylesheet" href="~/AdminLTE-3.0.4/dist/css/adminlte.min.css">
     <!-- Google Font: Source Sans Pro -->
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,400i,700"
+          rel="stylesheet">
+
+    <link rel="stylesheet" href="~/AdminLTE-3.0.4/plugins/summernote/summernote-bs4.css">
+    <script src="~/AdminLTE-3.0.4/plugins/summernote/summernote.min.js"></script>
 </head>
 <!--
 BODY TAG OPTIONS:
@@ -33,7 +38,7 @@ to get the desired effect
 -->
 <body class="hold-transition sidebar-mini">
     <div class="wrapper">
-           
+
         <!-- /.navbar -->
         <!-- Main Sidebar Container -->
         <aside class="main-sidebar sidebar-dark-primary elevation-4">
@@ -66,17 +71,17 @@ to get the desired effect
                                 <i class="nav-icon fas fa-tachometer-alt"></i>
                                 <p>
                                     Kategoriler
-                                    
+
                                 </p>
                             </a>
-                            
+
                         </li>
                         <li class="nav-item">
                             <a href="/Heading/Index" class="nav-link">
                                 <i class="nav-icon fas fa-th"></i>
                                 <p>
                                     Başlıklar
-                                    
+
                                 </p>
                             </a>
                         </li>
@@ -85,10 +90,10 @@ to get the desired effect
                                 <i class="nav-icon fas fa-copy"></i>
                                 <p>
                                     Yazarlar
-                                    
+
                                 </p>
                             </a>
-                            
+
                         </li>
                         <li class="nav-item has-treeview">
                             <a href="#" class="nav-link">
@@ -124,37 +129,37 @@ to get the desired effect
                                 <i class="nav-icon fas fa-tree"></i>
                                 <p>
                                     Hakkımızıda
-                                    
+
                                 </p>
                             </a>
-                           
+
                         </li>
                         <li class="nav-item has-treeview">
-                            <a href="#" class="nav-link">
+                            <a href="/Contact/Index" class="nav-link">
                                 <i class="nav-icon fas fa-edit"></i>
                                 <p>
                                     İletişim - Mesajlar
-                                  
+
                                 </p>
                             </a>
-                            
+
                         </li>
                         <li class="nav-item has-treeview">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-table"></i>
                                 <p>
                                     Yazılar
-                                    
+
                                 </p>
                             </a>
-                         
+
                         </li>
-                        
+
                         <li class="nav-item">
                             <a href="pages/calendar.html" class="nav-link">
                                 <i class="nav-icon fas fa-calendar-alt"></i>
                                 <p>
-                                     Yetkilendirmeler
+                                    Yetkilendirmeler
                                     <span class="badge badge-info right">2</span>
                                 </p>
                             </a>
@@ -168,36 +173,36 @@ to get the desired effect
                             </a>
                         </li>
                         <li class="nav-item has-treeview">
-                            <a href="#" class="nav-link">
+                            <a href="/ErrorPage/Page404" class="nav-link">
                                 <i class="nav-icon far fa-envelope"></i>
                                 <p>
                                     Hata sayfaları
-                                    <i class="right fas fa-angle-left"></i>
+                                    
                                 </p>
                             </a>
-                            
+
                         </li>
                         <li class="nav-item has-treeview">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon fas fa-book"></i>
                                 <p>
                                     Siteye git
-                                   
+
                                 </p>
                             </a>
-                           
+
                         </li>
                         <li class="nav-item has-treeview">
                             <a href="#" class="nav-link">
                                 <i class="nav-icon far fa-plus-square"></i>
                                 <p>
                                     Çıkış yap
-                                    
+
                                 </p>
                             </a>
-                            
+
                         </li>
-                        
+
                     </ul>
                 </nav>
                 <!-- /.sidebar-menu -->
@@ -207,18 +212,18 @@ to get the desired effect
 
         <!-- Content Wrapper. Contains page content -->
         <div class="content-wrapper">
-            
-            
+
+
             <!-- Main content -->
             <div class="content">
-                
+
                 @RenderBody()
                 <!-- /.container-fluid -->
             </div>
             <!-- /.content -->
         </div>
-   
-        
+
+
     </div>
     <!-- ./wrapper -->
     <!-- REQUIRED SCRIPTS -->
@@ -233,6 +238,15 @@ to get the desired effect
     <script src="~/AdminLTE-3.0.4/plugins/chart.js/Chart.min.js"></script>
     <script src="~/AdminLTE-3.0.4/dist/js/demo.js"></script>
     <script src="~/AdminLTE-3.0.4/dist/js/pages/dashboard3.js"></script>
+    
+    <script src="~/AdminLTE-3.0.4/plugins/summernote/summernote-bs4.min.js"></script>
+    <!-- Page Script -->
+    <script>
+
+        $(function () {
+            //Add text editor
+            $('#compose-textarea').summernote()
+        })</script>
 </body>
 </html>
 

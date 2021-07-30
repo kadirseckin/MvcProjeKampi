@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
@@ -12,13 +13,15 @@ namespace EntityLayer.Concrete
         [Key]
         public int MessageID { get; set; }
 
-        [StringLength(50)]
+        [StringLength(50), DisplayName("Gönderici mail")]
         public string SenderMail { get; set; }
-        [StringLength(50)]
+        [StringLength(50), DisplayName("Alıcı mail")]
         public string ReceiverMail{ get; set; }
 
-        [StringLength(100)]
+        [StringLength(100), DisplayName("Konu")]
         public string Subject { get; set; }
+
+        [DisplayName("Mesaj içeriği")]
         public string MessageContent { get; set; }
         public DateTime MessageDate { get; set; }
     }
