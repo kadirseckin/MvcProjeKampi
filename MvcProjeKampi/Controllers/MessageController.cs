@@ -11,12 +11,14 @@ using System.Web.Mvc;
 
 namespace MvcProjeKampi.Controllers
 {
+    [Authorize]
     public class MessageController : Controller
     {
         private MessageManager messageManager = new MessageManager(new EfMessageDal());
         private MessageValidator messageValidator = new MessageValidator();
 
         // GET: Message
+       
         public ActionResult Inbox()
         {
             var messageList = messageManager.GetListInbox();
