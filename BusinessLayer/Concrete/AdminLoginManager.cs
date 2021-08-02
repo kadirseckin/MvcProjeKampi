@@ -22,5 +22,10 @@ namespace BusinessLayer.Concrete
         {
            return _adminDal.Get(x=>x.AdminUserName==admin.AdminUserName && x.AdminPassword==admin.AdminPassword);
         }
+
+        public Admin GetAdmin(string name)
+        {
+           return _adminDal.Get(x=>x.AdminUserName==name);
+        }
     }
 }
