@@ -47,5 +47,10 @@ namespace BusinessLayer.Concrete
         {
             return _contentDal.List(x => x.HeadingID == heading_id).OrderByDescending(x=>x.ContentDate).ToList();
         }
+
+        public List<Content> GetListByWriter(int id)
+        {
+            return _contentDal.List(x => x.WriterID == id); 
+        }
     }
 }

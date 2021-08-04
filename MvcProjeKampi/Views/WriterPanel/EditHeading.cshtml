@@ -1,0 +1,53 @@
+﻿@using EntityLayer.Concrete
+@model  Heading
+
+@{
+    ViewBag.Title = "EditHeading";
+    Layout = "~/Views/Shared/_WriterLayout.cshtml";
+}
+
+
+<br />
+
+@using (Html.BeginForm("EditHeading", "WriterPanel", FormMethod.Post))
+{
+    @Html.AntiForgeryToken()
+
+    <div class="form-horizontal">
+        <h4>Başlık güncelleme sayfası</h4>
+        <hr />
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+        @Html.HiddenFor(x => x.HeadingID)
+        @Html.HiddenFor(x => x.WriterID)
+        @Html.HiddenFor(x => x.HeadingStatus)
+
+        <div class="form-group">
+            @Html.LabelFor(model => model.HeadingName, htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.HeadingName, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.HeadingName, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Kateogori")
+            <div class="col-md-10">
+                @Html.DropDownListFor(x => x.CategoryID,
+               (List<SelectListItem>)ViewBag.valueCategory, new { @class = "form-control" })
+            </div>
+        </div>
+
+
+
+
+        <div class="form-group">
+            <div class="col-md-offset-2 col-md-10">
+                <input type="submit" value="Save" class="btn btn-success" />
+            </div>
+        </div>
+    </div>
+}
+
+
+
